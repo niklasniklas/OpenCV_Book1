@@ -30,6 +30,7 @@ public:
     QWidget *centralWidget;
     QLabel *label;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -46,7 +47,10 @@ public:
         label->setGeometry(QRect(360, 290, 411, 241));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(70, 70, 101, 51));
+        pushButton->setGeometry(QRect(20, 20, 101, 51));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(750, 20, 101, 41));
         OpenCVscratchClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(OpenCVscratchClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -68,7 +72,8 @@ public:
     {
         OpenCVscratchClass->setWindowTitle(QApplication::translate("OpenCVscratchClass", "OpenCVscratch", 0));
         label->setText(QApplication::translate("OpenCVscratchClass", "TextLabel", 0));
-        pushButton->setText(QApplication::translate("OpenCVscratchClass", "PushButton", 0));
+        pushButton->setText(QApplication::translate("OpenCVscratchClass", "Load Image", 0));
+        pushButton_2->setText(QApplication::translate("OpenCVscratchClass", "function()", 0));
     } // retranslateUi
 
 };
